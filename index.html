@@ -724,7 +724,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
   sessionStorage.setItem('auditRaw', raw);
 
   try {
-    await fetch(`${SUPABASE_URL}/rest/v1/submissions`, {
+    await fetch(`${SUPABASE_URL}/rest/v1/Submissions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
