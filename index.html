@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Brand Audit — DeCreationz</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --white: #FAFAF7;
+    --cream: #F2F0E8;
+    --orange: #E8530A;
+    --orange-light: #FF6B1A;
+    --orange-dim: rgba(232,83,10,0.12);
+    --gray: #6B6B6B;
+    --gray-light: #C8C6BE;
+    --border: rgba(255,255,255,0.08);
+    --border-dark: rgba(10,10,10,0.1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .logo span { color: var(--white); }
+  .nav-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 2rem 4rem;
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--orange);
+  }
+  .hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--orange);
+  }
+  .hero-body {
+    font-size: 1.05rem;
+    color: rgba(250,250,247,0.7);
+    max-width: 560px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .stat-num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--gray);
+    letter-spacing: .02em;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .hero-cta:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .hero-cta svg { width: 16px; height: 16px; }
+  .scroll-hint {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: var(--gray);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 40px;
+    height: 1px;
+    background: var(--gray);
+  }
+
+  /* PAIN SECTION */
+  .pain {
+    background: var(--cream);
+    color: var(--black);
+    padding: 6rem 2rem;
+  }
+  .pain-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--orange);
+  }
+  .pain h2 em { font-style: normal; color: var(--orange); }
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    color: var(--black);
+  }
+  .pain-text {
+    font-size: 1.05rem;
+    color: #3A3A3A;
+    line-height: 1.85;
+    max-width: 620px;
+  }
+  .pain-text p { margin-bottom: 1.2rem; }
+  .pain-text p:last-child { margin-bottom: 0; }
+  .pain-text strong { color: var(--black); font-weight: 500; }
+  .pain-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    margin-top: 3.5rem;
+    border: 1px solid rgba(10,10,10,0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(10,10,10,0.12);
+  }
+  .pain-card {
+    background: var(--cream);
+    padding: 1.75rem 1.5rem;
+  }
+  .pain-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: var(--orange-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--orange);
+    font-size: 1.1rem;
+  }
+  .pain-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--black);
+  }
+  .pain-card p {
+    font-size: 0.85rem;
+    color: #5A5A5A;
+    line-height: 1.6;
+  }
+
+  /* ASSURANCE */
+  .assurance {
+    padding: 6rem 2rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .assurance h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+  .assurance h2 em { font-style: normal; color: var(--orange); }
+  .assurance-text {
+    font-size: 1.05rem;
+    color: rgba(250,250,247,0.7);
+    line-height: 1.85;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  .assurance-text p { margin-bottom: 1.1rem; }
+  .what-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 3rem;
+  }
+  .what-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: rgba(250,250,247,0.85);
+  }
+  .what-list li::before {
+    content: '→';
+    color: var(--orange);
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .price-tag {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--orange-dim);
+    border: 0.5px solid rgba(232,83,10,0.3);
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .price-amount {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .price-note {
+    font-size: 0.8rem;
+    color: rgba(250,250,247,0.5);
+    letter-spacing: .04em;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 0;
+  }
+
+  /* CHECKLIST SECTION */
+  .checklist-section {
+    padding: 5rem 2rem 6rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .checklist-section h2 em { font-style: normal; color: var(--orange); }
+  .checklist-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .checklist-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 2.5rem;
+  }
+
+  /* SCORE BAR */
+  .score-display {
+    background: rgba(255,255,255,0.04);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .score-left { display: flex; flex-direction: column; gap: 2px; }
+  .score-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--white);
+  }
+  .score-number span { font-size: 1rem; color: var(--gray); font-weight: 400; }
+  .score-caption { font-size: 0.78rem; color: var(--gray); }
+  .progress-wrap { flex: 1; min-width: 140px; }
+  .progress-track {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--orange);
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+  .progress-label { font-size: 0.75rem; color: var(--gray); }
+  .grade-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    color: var(--gray-light);
+    border: 0.5px solid var(--border);
+    transition: all 0.3s;
+  }
+
+  /* LEGEND */
+  .legend {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .leg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+  .leg-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* SECTION GROUPS */
+  .group { margin-bottom: 2rem; }
+  .group-header {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    padding: 0.75rem 0;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .group-header::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+    display: none;
+  }
+
+  /* CHECKLIST ITEMS */
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .item:last-child { border-bottom: none; }
+  .item-num {
+    font-size: 0.72rem;
+    color: var(--gray);
+    min-width: 22px;
+    padding-top: 3px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .item-body { flex: 1; }
+  .item-q {
+    font-size: 0.92rem;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 3px;
+  }
+  .item-hint {
+    font-size: 0.78rem;
+    color: var(--gray);
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .score-btns {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .s-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 0.5px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    color: var(--gray);
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .s-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+  .s-btn.a1 { background: rgba(226,75,74,0.2); border-color: #E24B4A; color: #F09595; }
+  .s-btn.a2 { background: rgba(239,159,39,0.2); border-color: #EF9F27; color: #FAC775; }
+  .s-btn.a3 { background: rgba(55,138,221,0.2); border-color: #378ADD; color: #85B7EB; }
+  .s-btn.a4 { background: rgba(29,158,117,0.2); border-color: #1D9E75; color: #5DCAA5; }
+
+  /* SUBMIT */
+  .submit-wrap {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .submit-note { font-size: 0.82rem; color: var(--gray); }
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .submit-btn:hover { background: var(--orange-light); transform: translateY(-1px); }
+  .submit-btn:disabled { background: rgba(255,255,255,0.1); color: var(--gray); cursor: not-allowed; transform: none; }
+
+  /* FOOTER */
+  footer {
+    border-top: 0.5px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+  footer a { color: var(--orange); text-decoration: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero > *:nth-child(4) { animation-delay: 0.32s; }
+  .hero > *:nth-child(5) { animation-delay: 0.38s; }
+  .hero > *:nth-child(6) { animation-delay: 0.44s; }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .hero { padding: 3.5rem 1.25rem 3rem; min-height: auto; }
+    .pain { padding: 4rem 1.25rem; }
+    .assurance { padding: 4rem 1.25rem; }
+    .checklist-section { padding: 3.5rem 1.25rem 5rem; }
+    .hero-stats { gap: 1.5rem; }
+    .s-btn { width: 30px; height: 30px; font-size: 0.75rem; }
+    .score-btns { gap: 4px; }
+    .item { gap: 8px; }
+    .score-display { gap: 1rem; }
+  }
+  @media (max-width: 400px) {
+    .s-btn { width: 28px; height: 28px; font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">De<span>C</span>reationz</a>
+  <span class="nav-tag">Brand Audit</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Free diagnosis. Real answers.</div>
+  <h1>Your Instagram should be<br>bringing you clients.<br><em>Is it?</em></h1>
+  <p class="hero-body">You are showing up. You are posting. But people land on your page and leave without buying, without following, without even sending a message. This audit tells you exactly why.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">25</span>
+      <span class="stat-label">Audit points</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">10<span style="font-size:1rem">min</span></span>
+      <span class="stat-label">To complete</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Brand areas covered</span>
+    </div>
+  </div>
+  <a href="#audit" class="hero-cta">
+    Start my audit
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  </a>
+  <div class="scroll-hint">
+    <span class="scroll-line"></span>
+    Scroll to learn more
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="pain-inner">
+    <div class="section-label">The honest truth</div>
+    <h2>Most business pages are quietly losing clients <em>every single day.</em></h2>
+    <div class="pain-text">
+      <p>You have invested time into your page. You post when you can. You have a decent bio. Maybe you even run ads. But the results do not match the effort — and nobody is telling you why.</p>
+      <p>Here is what is actually happening: potential clients are landing on your Instagram, looking around for about <strong>five seconds</strong>, and leaving. Not because your product is bad. But because something on your page is failing to convince them you are worth their money.</p>
+      <p>It could be your highlight covers. Your caption style. The inconsistency in your visuals. The missing call to action. The bio that talks about you instead of them. There are 25 places on your Instagram where trust can break down — and most business owners have no idea which ones are costing them.</p>
+    </div>
+    <div class="pain-cards">
+      <div class="pain-card">
+        <div class="pain-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>5 seconds</h3>
+        <p>That is how long a visitor takes to decide if your page is worth their time.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Silent exits</h3>
+        <p>Most people who leave your page never tell you what put them off.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>25 failure points</h3>
+        <p>There are 25 places where your brand can quietly lose someone's trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSURANCE -->
+<section class="assurance">
+  <div class="section-label">What this audit does</div>
+  <h2>Stop guessing. Start<br><em>knowing.</em></h2>
+  <div class="assurance-text">
+    <p>The Instagram Brand Audit walks you through every critical area of your page — your profile setup, visual identity, content quality, trust signals, messaging clarity, and engagement habits — and gives you an honest score for each one.</p>
+    <p>No vague feedback. No generic tips you have already heard. Just a clear picture of what is working and what is silently killing your credibility.</p>
+  </div>
+  <ul class="what-list">
+    <li>Whether your profile is making the right first impression in 5 seconds</li>
+    <li>If your visuals are building trust or quietly pushing people away</li>
+    <li>Whether your content is actually working or just filling space</li>
+    <li>What your page is missing that costs you clients every day</li>
+    <li>A personalised result and clear next step based on your score</li>
+  </ul>
+  <a href="#audit" class="hero-cta">
+    Begin the audit
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  </a>
+</section>
+
+<hr class="divider">
+
+<!-- CHECKLIST -->
+<section class="checklist-section" id="audit">
+  <div class="section-label">The audit</div>
+  <h2>Rate your Instagram <em>honestly.</em></h2>
+  <p class="checklist-subtitle">Open your Instagram page on another tab, then score yourself on each point below.</p>
+
+  <div class="score-display">
+    <div class="score-left">
+      <div class="score-number" id="scoreNum">0<span>/100</span></div>
+      <div class="score-caption">Your brand score</div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">0 of 25 answered</div>
+    </div>
+    <div class="grade-badge" id="gradeBadge">Not started</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>1 — Urgent fix</div>
+    <div class="leg"><div class="leg-dot" style="background:#EF9F27"></div>2 — Below average</div>
+    <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>3 — Good</div>
+    <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>4 — Excellent</div>
+  </div>
+
+  <div id="checklistBody"></div>
+
+  <div class="submit-wrap">
+    <p class="submit-note">Answer all 25 points to see your personalised result.</p>
+    <button class="submit-btn" id="submitBtn" disabled>
+      See my results
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </button>
+  </div>
+</section>
+
+<footer>
+  <p>Built by <a href="https://behance.net/workwithdecreationz" target="_blank">DeCreationz</a> &nbsp;·&nbsp; Brand Identity & Social Media Design</p>
+</footer>
+
+<script>
+const sections = [
+  { label: "Profile setup", items: [
+    {q:"Is your profile photo clear, on-brand, and professional?", hint:"A blurry photo or busy background loses trust immediately."},
+    {q:"Does your username match your business name and make you easy to find?", hint:"People should type your name and find you instantly."},
+    {q:"Is your account set to Business or Creator mode?", hint:"This unlocks analytics, contact buttons, and ad tools."},
+    {q:"Does your bio explain exactly what you do and who you help — in two lines or less?", hint:"Avoid vague words like 'CEO' or 'entrepreneur'. Be specific."},
+    {q:"Does your bio have one clear call to action?", hint:"Without a CTA, people read your bio and leave."}
+  ]},
+  { label: "Link in bio", items: [
+    {q:"Is there a working link in your bio?", hint:"An empty link slot is a missed opportunity every single day."},
+    {q:"Does your link go somewhere useful — not a homepage that confuses people?", hint:"Best: a WhatsApp chat, booking page, or Linktree with 2–3 clear options."}
+  ]},
+  { label: "Visual consistency", items: [
+    {q:"Do you use the same 2–4 brand colors across your posts?", hint:"Random colors = forgettable brand. Consistency = recognition."},
+    {q:"Do you use the same 1–2 fonts consistently across all your content?", hint:"Mixing too many fonts makes your page look unplanned."},
+    {q:"Does your grid look intentional when someone views your profile as a whole?", hint:"First impressions happen in 3 seconds. A chaotic grid loses followers."},
+    {q:"Are your Highlight covers and video covers visually consistent?", hint:"Covers are thumbnails — they need to be readable and branded."}
+  ]},
+  { label: "Content quality", items: [
+    {q:"Do your captions speak directly to your customer's problem or desire?", hint:"Captions that talk about 'you' (the business) instead of 'them' (the customer) don't convert."},
+    {q:"Do you post at least 3 times per week?", hint:"Irregular posting signals an inactive or unreliable business."},
+    {q:"Does each post have a clear purpose — educate, sell, or connect?", hint:"Random content with no strategy doesn't build trust."},
+    {q:"Do your posts include a call to action — even a simple 'comment below' or 'save this'?", hint:"Posts without CTAs get low engagement, which kills your reach."},
+    {q:"Do you use Stories consistently — at least 3–4 times per week?", hint:"Stories keep you top of mind even when your feed posts aren't seen."}
+  ]},
+  { label: "Trust signals", items: [
+    {q:"Do you have Highlights set up on your profile?", hint:"Highlights act as a permanent menu. No highlights = no structure."},
+    {q:"Do your Highlights have branded, consistent covers?", hint:"Default grey circles look unfinished and unprofessional."},
+    {q:"Have you posted at least one client testimonial or result in the last 30 days?", hint:"Social proof is the fastest way to earn trust from strangers."},
+    {q:"Is your most recent post less than 7 days old?", hint:"An outdated last post tells potential clients you may be inactive."}
+  ]},
+  { label: "Messaging clarity", items: [
+    {q:"Can a stranger figure out your prices or price range within 60 seconds on your page?", hint:"Hiding prices completely creates friction. Some transparency builds confidence."},
+    {q:"Do you clearly show WHO your product or service is for?", hint:"'For everyone' converts no one. The more specific, the better."},
+    {q:"Does your page make it obvious HOW to buy from or hire you?", hint:"If the path to purchase isn't clear, people won't ask — they'll just leave."}
+  ]},
+  { label: "Engagement", items: [
+    {q:"Do you respond to every comment and DM within 24 hours?", hint:"Slow responses signal poor customer service before someone even buys."},
+    {q:"Do you engage with your followers' content — not just your own?", hint:"Instagram rewards accounts that act like real people, not broadcasters."},
+    {q:"Have you used at least one interactive Story feature in the last 2 weeks?", hint:"Polls, question boxes, and quizzes train your audience to engage and boost reach."}
+  ]}
+];
+
+const scores = {};
+let totalItems = 0;
+const body = document.getElementById('checklistBody');
+let itemIndex = 0;
+
+sections.forEach(sec => {
+  const grp = document.createElement('div');
+  grp.className = 'group';
+  const gh = document.createElement('div');
+  gh.className = 'group-header';
+  gh.textContent = sec.label;
+  grp.appendChild(gh);
+
+  sec.items.forEach(item => {
+    totalItems++;
+    const idx = itemIndex++;
+    const row = document.createElement('div');
+    row.className = 'item';
+    row.innerHTML = `
+      <div class="item-num">${String(idx+1).padStart(2,'0')}</div>
+      <div class="item-body">
+        <div class="item-q">${item.q}</div>
+        <div class="item-hint">${item.hint}</div>
+      </div>
+      <div class="score-btns">
+        ${[1,2,3,4].map(v=>`<button class="s-btn" data-idx="${idx}" data-val="${v}" aria-label="Score ${v} for question ${idx+1}">${v}</button>`).join('')}
+      </div>`;
+    grp.appendChild(row);
+  });
+  body.appendChild(grp);
+});
+
+function updateDisplay() {
+  const vals = Object.values(scores);
+  const answered = vals.length;
+  const raw = vals.reduce((a,b)=>a+b,0);
+  const pct = answered > 0 ? Math.round((raw / (totalItems * 4)) * 100) : 0;
+
+  document.getElementById('scoreNum').innerHTML = `${pct}<span>/100</span>`;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `${answered} of ${totalItems} answered`;
+
+  const fill = document.getElementById('progressFill');
+  if (pct >= 75) fill.style.background = '#1D9E75';
+  else if (pct >= 50) fill.style.background = '#378ADD';
+  else if (pct >= 30) fill.style.background = '#EF9F27';
+  else fill.style.background = '#E24B4A';
+
+  const badge = document.getElementById('gradeBadge');
+  if (answered < totalItems) {
+    badge.textContent = answered + '/' + totalItems + ' answered';
+    badge.style.background = 'rgba(255,255,255,0.06)';
+    badge.style.color = 'var(--gray-light)';
+    badge.style.borderColor = 'var(--border)';
+  } else if (pct >= 85) {
+    badge.textContent = 'Strong brand';
+    badge.style.background = 'rgba(29,158,117,0.15)';
+    badge.style.color = '#5DCAA5';
+    badge.style.borderColor = 'rgba(29,158,117,0.3)';
+  } else if (pct >= 65) {
+    badge.textContent = 'Getting there';
+    badge.style.background = 'rgba(55,138,221,0.15)';
+    badge.style.color = '#85B7EB';
+    badge.style.borderColor = 'rgba(55,138,221,0.3)';
+  } else if (pct >= 40) {
+    badge.textContent = 'Needs work';
+    badge.style.background = 'rgba(239,159,39,0.15)';
+    badge.style.color = '#FAC775';
+    badge.style.borderColor = 'rgba(239,159,39,0.3)';
+  } else {
+    badge.textContent = 'Urgent rebuild';
+    badge.style.background = 'rgba(226,75,74,0.15)';
+    badge.style.color = '#F09595';
+    badge.style.borderColor = 'rgba(226,75,74,0.3)';
+  }
+
+  document.getElementById('submitBtn').disabled = answered < totalItems;
+}
+
+body.addEventListener('click', e => {
+  const btn = e.target.closest('.s-btn');
+  if (!btn) return;
+  const idx = btn.dataset.idx;
+  const val = parseInt(btn.dataset.val);
+  body.querySelectorAll(`.s-btn[data-idx="${idx}"]`).forEach(b => {
+    b.className = 's-btn';
+  });
+  btn.classList.add('a' + val);
+  scores[idx] = val;
+  updateDisplay();
+});
+
+document.getElementById('submitBtn').addEventListener('click', () => {
+  const vals = Object.values(scores);
+  const raw = vals.reduce((a,b)=>a+b,0);
+  const pct = Math.round((raw / (totalItems * 4)) * 100);
+  sessionStorage.setItem('auditScore', pct);
+  sessionStorage.setItem('auditRaw', raw);
+  sessionStorage.setItem('auditScores', JSON.stringify(scores));
+  window.location.href = 'results.html';
+});
+</script>
+</body>
+</html>
