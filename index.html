@@ -28,8 +28,6 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
-  /* NAV */
   nav {
     padding: 1.25rem 2rem;
     display: flex;
@@ -61,8 +59,6 @@
     padding: 5px 12px;
     border-radius: 20px;
   }
-
-  /* HERO */
   .hero {
     min-height: 92vh;
     display: flex;
@@ -100,10 +96,7 @@
     margin-bottom: 2rem;
     color: var(--white);
   }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--orange);
-  }
+  .hero h1 em { font-style: normal; color: var(--orange); }
   .hero-body {
     font-size: 1.05rem;
     color: rgba(250,250,247,0.7);
@@ -117,11 +110,7 @@
     flex-wrap: wrap;
     margin-bottom: 3rem;
   }
-  .stat {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
   .stat-num {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.8rem;
@@ -129,11 +118,7 @@
     color: var(--white);
     line-height: 1;
   }
-  .stat-label {
-    font-size: 0.78rem;
-    color: var(--gray);
-    letter-spacing: .02em;
-  }
+  .stat-label { font-size: 0.78rem; color: var(--gray); letter-spacing: .02em; }
   .hero-cta {
     display: inline-flex;
     align-items: center;
@@ -165,22 +150,13 @@
     letter-spacing: .06em;
     text-transform: uppercase;
   }
-  .scroll-line {
-    width: 40px;
-    height: 1px;
-    background: var(--gray);
-  }
-
-  /* PAIN SECTION */
+  .scroll-line { width: 40px; height: 1px; background: var(--gray); }
   .pain {
     background: var(--cream);
     color: var(--black);
     padding: 6rem 2rem;
   }
-  .pain-inner {
-    max-width: 820px;
-    margin: 0 auto;
-  }
+  .pain-inner { max-width: 820px; margin: 0 auto; }
   .section-label {
     font-size: 0.72rem;
     font-weight: 500;
@@ -192,13 +168,8 @@
     align-items: center;
     gap: 10px;
   }
-  .section-label::before {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: var(--orange);
-  }
-  .pain h2 em { font-style: normal; color: var(--orange); }
+  .section-label::before { content: ''; width: 20px; height: 1px; background: var(--orange); }
+  .pain h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 800;
@@ -207,12 +178,8 @@
     margin-bottom: 2rem;
     color: var(--black);
   }
-  .pain-text {
-    font-size: 1.05rem;
-    color: #3A3A3A;
-    line-height: 1.85;
-    max-width: 620px;
-  }
+  .pain h2 em { font-style: normal; color: var(--orange); }
+  .pain-text { font-size: 1.05rem; color: #3A3A3A; line-height: 1.85; max-width: 620px; }
   .pain-text p { margin-bottom: 1.2rem; }
   .pain-text p:last-child { margin-bottom: 0; }
   .pain-text strong { color: var(--black); font-weight: 500; }
@@ -226,10 +193,7 @@
     overflow: hidden;
     background: rgba(10,10,10,0.12);
   }
-  .pain-card {
-    background: var(--cream);
-    padding: 1.75rem 1.5rem;
-  }
+  .pain-card { background: var(--cream); padding: 1.75rem 1.5rem; }
   .pain-card-icon {
     width: 36px;
     height: 36px;
@@ -240,27 +204,10 @@
     justify-content: center;
     margin-bottom: 1rem;
     color: var(--orange);
-    font-size: 1.1rem;
   }
-  .pain-card h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: var(--black);
-  }
-  .pain-card p {
-    font-size: 0.85rem;
-    color: #5A5A5A;
-    line-height: 1.6;
-  }
-
-  /* ASSURANCE */
-  .assurance {
-    padding: 6rem 2rem;
-    max-width: 820px;
-    margin: 0 auto;
-  }
+  .pain-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--black); }
+  .pain-card p { font-size: 0.85rem; color: #5A5A5A; line-height: 1.6; }
+  .assurance { padding: 6rem 2rem; max-width: 820px; margin: 0 auto; }
   .assurance h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -270,72 +217,13 @@
     margin-bottom: 1.75rem;
   }
   .assurance h2 em { font-style: normal; color: var(--orange); }
-  .assurance-text {
-    font-size: 1.05rem;
-    color: rgba(250,250,247,0.7);
-    line-height: 1.85;
-    max-width: 600px;
-    margin-bottom: 2.5rem;
-  }
+  .assurance-text { font-size: 1.05rem; color: rgba(250,250,247,0.7); line-height: 1.85; max-width: 600px; margin-bottom: 2.5rem; }
   .assurance-text p { margin-bottom: 1.1rem; }
-  .what-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 3rem;
-  }
-  .what-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 0.95rem;
-    color: rgba(250,250,247,0.85);
-  }
-  .what-list li::before {
-    content: '→';
-    color: var(--orange);
-    font-weight: 500;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .price-tag {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 4px;
-    background: var(--orange-dim);
-    border: 0.5px solid rgba(232,83,10,0.3);
-    border-radius: 8px;
-    padding: 1.25rem 1.75rem;
-    margin-bottom: 2.5rem;
-  }
-  .price-amount {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--orange);
-    line-height: 1;
-  }
-  .price-note {
-    font-size: 0.8rem;
-    color: rgba(250,250,247,0.5);
-    letter-spacing: .04em;
-  }
-
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 0.5px solid var(--border);
-    margin: 0;
-  }
-
-  /* CHECKLIST SECTION */
-  .checklist-section {
-    padding: 5rem 2rem 6rem;
-    max-width: 820px;
-    margin: 0 auto;
-  }
-  .checklist-section h2 em { font-style: normal; color: var(--orange); }
+  .what-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 3rem; }
+  .what-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: rgba(250,250,247,0.85); }
+  .what-list li::before { content: '→'; color: var(--orange); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+  .divider { border: none; border-top: 0.5px solid var(--border); margin: 0; }
+  .checklist-section { padding: 5rem 2rem 6rem; max-width: 820px; margin: 0 auto; }
   .checklist-section h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
@@ -343,13 +231,8 @@
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
   }
-  .checklist-subtitle {
-    font-size: 0.9rem;
-    color: var(--gray);
-    margin-bottom: 2.5rem;
-  }
-
-  /* SCORE BAR */
+  .checklist-section h2 em { font-style: normal; color: var(--orange); }
+  .checklist-subtitle { font-size: 0.9rem; color: var(--gray); margin-bottom: 2.5rem; }
   .score-display {
     background: rgba(255,255,255,0.04);
     border: 0.5px solid var(--border);
@@ -372,20 +255,8 @@
   .score-number span { font-size: 1rem; color: var(--gray); font-weight: 400; }
   .score-caption { font-size: 0.78rem; color: var(--gray); }
   .progress-wrap { flex: 1; min-width: 140px; }
-  .progress-track {
-    height: 6px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 6px;
-  }
-  .progress-fill {
-    height: 100%;
-    border-radius: 3px;
-    background: var(--orange);
-    transition: width 0.4s ease;
-    width: 0%;
-  }
+  .progress-track { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; margin-bottom: 6px; }
+  .progress-fill { height: 100%; border-radius: 3px; background: var(--orange); transition: width 0.4s ease; width: 0%; }
   .progress-label { font-size: 0.75rem; color: var(--gray); }
   .grade-badge {
     font-size: 0.75rem;
@@ -400,29 +271,9 @@
     border: 0.5px solid var(--border);
     transition: all 0.3s;
   }
-
-  /* LEGEND */
-  .legend {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-  .leg {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
-    color: var(--gray);
-  }
-  .leg-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  /* SECTION GROUPS */
+  .legend { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .leg { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--gray); }
+  .leg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
   .group { margin-bottom: 2rem; }
   .group-header {
     font-size: 0.7rem;
@@ -433,120 +284,51 @@
     padding: 0.75rem 0;
     border-bottom: 0.5px solid var(--border);
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
   }
-  .group-header::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--border);
-    display: none;
-  }
-
-  /* CHECKLIST ITEMS */
-  .item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 1rem 0;
-    border-bottom: 0.5px solid var(--border);
-  }
+  .item { display: flex; align-items: flex-start; gap: 12px; padding: 1rem 0; border-bottom: 0.5px solid var(--border); }
   .item:last-child { border-bottom: none; }
-  .item-num {
-    font-size: 0.72rem;
-    color: var(--gray);
-    min-width: 22px;
-    padding-top: 3px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
+  .item-num { font-size: 0.72rem; color: var(--gray); min-width: 22px; padding-top: 3px; font-family: 'Plus Jakarta Sans', sans-serif; }
   .item-body { flex: 1; }
-  .item-q {
-    font-size: 0.92rem;
-    color: var(--white);
-    line-height: 1.5;
-    margin-bottom: 3px;
-  }
-  .item-hint {
-    font-size: 0.78rem;
-    color: var(--gray);
-    line-height: 1.5;
-    font-style: italic;
-  }
-  .score-btns {
-    display: flex;
-    gap: 5px;
-    flex-shrink: 0;
-  }
+  .item-q { font-size: 0.92rem; color: var(--white); line-height: 1.5; margin-bottom: 3px; }
+  .item-hint { font-size: 0.78rem; color: var(--gray); line-height: 1.5; font-style: italic; }
+  .score-btns { display: flex; gap: 5px; flex-shrink: 0; }
   .s-btn {
-    width: 34px;
-    height: 34px;
-    border-radius: 6px;
+    width: 34px; height: 34px; border-radius: 6px;
     border: 0.5px solid rgba(255,255,255,0.12);
     background: rgba(255,255,255,0.04);
-    color: var(--gray);
-    font-size: 0.82rem;
-    font-weight: 500;
+    color: var(--gray); font-size: 0.82rem; font-weight: 500;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    cursor: pointer;
-    transition: all 0.15s;
+    cursor: pointer; transition: all 0.15s;
   }
   .s-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
   .s-btn.a1 { background: rgba(226,75,74,0.2); border-color: #E24B4A; color: #F09595; }
   .s-btn.a2 { background: rgba(239,159,39,0.2); border-color: #EF9F27; color: #FAC775; }
   .s-btn.a3 { background: rgba(55,138,221,0.2); border-color: #378ADD; color: #85B7EB; }
   .s-btn.a4 { background: rgba(29,158,117,0.2); border-color: #1D9E75; color: #5DCAA5; }
-
-  /* SUBMIT */
   .submit-wrap {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
+    margin-top: 2.5rem; padding-top: 2rem;
     border-top: 0.5px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    display: flex; flex-direction: column;
+    align-items: flex-start; gap: 1rem;
   }
   .submit-note { font-size: 0.82rem; color: var(--gray); }
   .submit-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--orange);
-    color: var(--white);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 0.88rem;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--orange); color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+    font-size: 0.88rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: 1rem 2rem; border-radius: 4px; border: none;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
   }
   .submit-btn:hover { background: var(--orange-light); transform: translateY(-1px); }
   .submit-btn:disabled { background: rgba(255,255,255,0.1); color: var(--gray); cursor: not-allowed; transform: none; }
-
-  /* FOOTER */
-  footer {
-    border-top: 0.5px solid var(--border);
-    padding: 2rem;
-    text-align: center;
-    font-size: 0.78rem;
-    color: var(--gray);
-  }
+  footer { border-top: 0.5px solid var(--border); padding: 2rem; text-align: center; font-size: 0.78rem; color: var(--gray); }
   footer a { color: var(--orange); text-decoration: none; }
-
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hero > * {
-    animation: fadeUp 0.6s ease both;
-  }
+  .hero > * { animation: fadeUp 0.6s ease both; }
   .hero > *:nth-child(1) { animation-delay: 0.05s; }
   .hero > *:nth-child(2) { animation-delay: 0.15s; }
   .hero > *:nth-child(3) { animation-delay: 0.25s; }
@@ -554,7 +336,65 @@
   .hero > *:nth-child(5) { animation-delay: 0.38s; }
   .hero > *:nth-child(6) { animation-delay: 0.44s; }
 
-  /* MOBILE */
+  /* INFO GATE */
+  .gate-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+  .gate-box {
+    background: #141414;
+    border: 0.5px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    width: 100%; max-width: 460px;
+    animation: fadeUp 0.4s ease both;
+  }
+  .gate-eyebrow {
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .gate-eyebrow::before { content:''; width:16px; height:1px; background:var(--orange); }
+  .gate-box h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem; font-weight: 800;
+    letter-spacing: -0.02em; margin-bottom: 0.5rem; line-height: 1.2;
+  }
+  .gate-box p { font-size: 0.85rem; color: rgba(250,250,247,0.55); margin-bottom: 1.75rem; line-height: 1.6; }
+  .gate-field { margin-bottom: 1rem; }
+  .gate-field label {
+    display: block; font-size: 0.78rem; font-weight: 500;
+    color: rgba(250,250,247,0.6); margin-bottom: 6px; letter-spacing: .02em;
+  }
+  .gate-field input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid rgba(255,255,255,0.12);
+    border-radius: 8px; padding: 0.75rem 1rem;
+    font-size: 0.92rem; color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    outline: none; transition: border-color 0.2s;
+  }
+  .gate-field input:focus { border-color: var(--orange); }
+  .gate-field input::placeholder { color: rgba(255,255,255,0.2); }
+  .gate-submit {
+    width: 100%; margin-top: 0.5rem;
+    background: var(--orange); color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+    font-size: 0.9rem; letter-spacing: .04em; text-transform: uppercase;
+    padding: 0.9rem; border-radius: 8px; border: none;
+    cursor: pointer; transition: background 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .gate-submit:hover { background: var(--orange-light); }
+  .gate-submit:disabled { background: rgba(255,255,255,0.1); color: var(--gray); cursor: not-allowed; }
+  .gate-note { font-size: 0.72rem; color: rgba(250,250,247,0.25); text-align: center; margin-top: 1rem; line-height: 1.5; }
+
   @media (max-width: 600px) {
     nav { padding: 1rem 1.25rem; }
     .hero { padding: 3.5rem 1.25rem 3rem; min-height: auto; }
@@ -566,6 +406,7 @@
     .score-btns { gap: 4px; }
     .item { gap: 8px; }
     .score-display { gap: 1rem; }
+    .gate-box { padding: 2rem 1.5rem; }
   }
   @media (max-width: 400px) {
     .s-btn { width: 28px; height: 28px; font-size: 0.7rem; }
@@ -574,12 +415,37 @@
 </head>
 <body>
 
+<!-- INFO GATE -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-box">
+    <div class="gate-eyebrow">Before you begin</div>
+    <h2>Enter your details to start your audit</h2>
+    <p>Your results will be personalised to you. We will never share your information with anyone.</p>
+    <div class="gate-field">
+      <label for="gateName">Full name</label>
+      <input type="text" id="gateName" placeholder="e.g. Amara Johnson" autocomplete="name">
+    </div>
+    <div class="gate-field">
+      <label for="gateEmail">Email address</label>
+      <input type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email">
+    </div>
+    <div class="gate-field">
+      <label for="gatePhone">WhatsApp / Phone number</label>
+      <input type="tel" id="gatePhone" placeholder="e.g. 08012345678" autocomplete="tel">
+    </div>
+    <button class="gate-submit" id="gateSubmit" onclick="startAudit()">
+      Start my audit
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </button>
+    <p class="gate-note">Your information is private and will never be shared or sold.</p>
+  </div>
+</div>
+
 <nav>
-  <a href="#" class="logo">De<span>C</span>reationz</a>
+  <a href="#" class="logo">DeCreationz</a>
   <span class="nav-tag">Brand Audit</span>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">Free diagnosis. Real answers.</div>
   <h1>Your Instagram should be<br>bringing you clients.<br><em>Is it?</em></h1>
@@ -608,7 +474,6 @@
   </div>
 </section>
 
-<!-- PAIN -->
 <section class="pain">
   <div class="pain-inner">
     <div class="section-label">The honest truth</div>
@@ -644,7 +509,6 @@
   </div>
 </section>
 
-<!-- ASSURANCE -->
 <section class="assurance">
   <div class="section-label">What this audit does</div>
   <h2>Stop guessing. Start<br><em>knowing.</em></h2>
@@ -667,12 +531,10 @@
 
 <hr class="divider">
 
-<!-- CHECKLIST -->
 <section class="checklist-section" id="audit">
   <div class="section-label">The audit</div>
   <h2>Rate your Instagram <em>honestly.</em></h2>
   <p class="checklist-subtitle">Open your Instagram page on another tab, then score yourself on each point below.</p>
-
   <div class="score-display">
     <div class="score-left">
       <div class="score-number" id="scoreNum">0<span>/100</span></div>
@@ -684,16 +546,13 @@
     </div>
     <div class="grade-badge" id="gradeBadge">Not started</div>
   </div>
-
   <div class="legend">
     <div class="leg"><div class="leg-dot" style="background:#E24B4A"></div>1 — Urgent fix</div>
     <div class="leg"><div class="leg-dot" style="background:#EF9F27"></div>2 — Below average</div>
     <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>3 — Good</div>
     <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>4 — Excellent</div>
   </div>
-
   <div id="checklistBody"></div>
-
   <div class="submit-wrap">
     <p class="submit-note">Answer all 25 points to see your personalised result.</p>
     <button class="submit-btn" id="submitBtn" disabled>
@@ -708,6 +567,23 @@
 </footer>
 
 <script>
+const SUPABASE_URL = 'https://kfvyoqwvohiyrqfxirff.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtmdnlvcXd2b2hpeXJxZnhpcmZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwMTM1MzUsImV4cCI6MjA5NTU4OTUzNX0.bqt2ItL-3djmcxDLJ7kvU4XWeypc5MbMNT61tPzbArY';
+
+function startAudit() {
+  const name = document.getElementById('gateName').value.trim();
+  const email = document.getElementById('gateEmail').value.trim();
+  const phone = document.getElementById('gatePhone').value.trim();
+  if (!name || !email || !phone) {
+    alert('Please fill in all three fields to continue.');
+    return;
+  }
+  sessionStorage.setItem('userName', name);
+  sessionStorage.setItem('userEmail', email);
+  sessionStorage.setItem('userPhone', phone);
+  document.getElementById('gateOverlay').style.display = 'none';
+}
+
 const sections = [
   { label: "Profile setup", items: [
     {q:"Is your profile photo clear, on-brand, and professional?", hint:"A blurry photo or busy background loses trust immediately."},
@@ -763,7 +639,6 @@ sections.forEach(sec => {
   gh.className = 'group-header';
   gh.textContent = sec.label;
   grp.appendChild(gh);
-
   sec.items.forEach(item => {
     totalItems++;
     const idx = itemIndex++;
@@ -788,17 +663,14 @@ function updateDisplay() {
   const answered = vals.length;
   const raw = vals.reduce((a,b)=>a+b,0);
   const pct = answered > 0 ? Math.round((raw / (totalItems * 4)) * 100) : 0;
-
   document.getElementById('scoreNum').innerHTML = `${pct}<span>/100</span>`;
   document.getElementById('progressFill').style.width = pct + '%';
   document.getElementById('progressLabel').textContent = `${answered} of ${totalItems} answered`;
-
   const fill = document.getElementById('progressFill');
   if (pct >= 75) fill.style.background = '#1D9E75';
   else if (pct >= 50) fill.style.background = '#378ADD';
   else if (pct >= 30) fill.style.background = '#EF9F27';
   else fill.style.background = '#E24B4A';
-
   const badge = document.getElementById('gradeBadge');
   if (answered < totalItems) {
     badge.textContent = answered + '/' + totalItems + ' answered';
@@ -826,7 +698,6 @@ function updateDisplay() {
     badge.style.color = '#F09595';
     badge.style.borderColor = 'rgba(226,75,74,0.3)';
   }
-
   document.getElementById('submitBtn').disabled = answered < totalItems;
 }
 
@@ -835,21 +706,38 @@ body.addEventListener('click', e => {
   if (!btn) return;
   const idx = btn.dataset.idx;
   const val = parseInt(btn.dataset.val);
-  body.querySelectorAll(`.s-btn[data-idx="${idx}"]`).forEach(b => {
-    b.className = 's-btn';
-  });
+  body.querySelectorAll(`.s-btn[data-idx="${idx}"]`).forEach(b => { b.className = 's-btn'; });
   btn.classList.add('a' + val);
   scores[idx] = val;
   updateDisplay();
 });
 
-document.getElementById('submitBtn').addEventListener('click', () => {
+document.getElementById('submitBtn').addEventListener('click', async () => {
   const vals = Object.values(scores);
   const raw = vals.reduce((a,b)=>a+b,0);
   const pct = Math.round((raw / (totalItems * 4)) * 100);
+  const name = sessionStorage.getItem('userName') || '';
+  const email = sessionStorage.getItem('userEmail') || '';
+  const phone = sessionStorage.getItem('userPhone') || '';
+
   sessionStorage.setItem('auditScore', pct);
   sessionStorage.setItem('auditRaw', raw);
-  sessionStorage.setItem('auditScores', JSON.stringify(scores));
+
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/submissions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ name, email, phone, score: pct })
+    });
+  } catch(e) {
+    console.error('Supabase save failed', e);
+  }
+
   window.location.href = 'results.html';
 });
 </script>
